@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DemoCalc extends StatefulWidget {
@@ -8,6 +9,7 @@ class DemoCalc extends StatefulWidget {
 }
 
 class _DemoCalcState extends State<DemoCalc> {
+  TextEditingController controller = TextEditingController(text: "0")
   String displayOutput = "0";
 
   void _onButtonPressed(String buttonText) {
@@ -60,8 +62,9 @@ class _DemoCalcState extends State<DemoCalc> {
             Expanded(
               child: Container(
                 alignment: Alignment.bottomRight,
-                child: Text(
-                  displayOutput,
+                child: TextField(
+                  readOnly: true,
+                  controller: controller,
                   style: TextStyle(fontSize: 48.0, fontWeight: FontWeight.bold),
                 ),
               ),
