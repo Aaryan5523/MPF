@@ -9,7 +9,7 @@ class DemoCalc extends StatefulWidget {
 }
 
 class _DemoCalcState extends State<DemoCalc> {
-  TextEditingController controller = TextEditingController(text: "0")
+  TextEditingController controller = TextEditingController(text: "0");
   String displayOutput = "0";
 
   void _onButtonPressed(String buttonText) {
